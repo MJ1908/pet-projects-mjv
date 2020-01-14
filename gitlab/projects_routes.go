@@ -18,11 +18,3 @@ func Init() {
 func GitlabRegister() {
 	v1.Group("/projects").GET("/", controller.ProyectList)
 }
-
-func ProjectsDate() {
-	v1.Group("/projectsDate").POST("/", controller.ProyectList)
-}
-
-func ProjectsDefined() {
-	v1.Group("/projectsDefined").GET("/", controller.ProyectList)
-}

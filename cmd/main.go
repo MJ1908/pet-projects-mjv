@@ -6,6 +6,6 @@ import (
 
 func main() {
 	gitlab.GitlabRegister()
-	gitlab.ProjectsDate()
 	gitlab.Init()
+
 }
