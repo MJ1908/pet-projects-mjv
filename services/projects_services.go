@@ -7,6 +7,7 @@ import (
 	"net/http"
 	config "petgitlab/configs"
 	"petgitlab/model"
+	"time"
 )
 
 func GetAllProjects() ([]model.Project, error) {
@@ -21,4 +22,8 @@ func GetAllProjects() ([]model.Project, error) {
 		json.Unmarshal(responseData, &projects)
 		return projects, nil
 	}
+}
+
+func IsInTimeWindow(target, startDate, endDate time.Time) bool {
+	return !target.Before(startDate) && target.Before(endDate)
 }
