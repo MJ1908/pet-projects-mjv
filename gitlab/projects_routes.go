@@ -17,4 +17,5 @@ func Init() {
 
 func GitlabRegister() {
 	v1.Group("/projects").GET("/", controller.ProyectList)
+	v1.Group("/wrongNameProjects").GET("/:pattern", controller.ProjectListWithWrongName)
 }
